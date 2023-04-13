@@ -1,10 +1,10 @@
 export interface Clinic {
-  id: string;
+  id: number;
   name: string;
 }
 
 export interface Patient {
-  id: string;
+  id: number;
   clinic_id: string;
   first_name: string;
   last_name: string;

@@ -15,7 +15,7 @@ const HomeScreen = () => {
       .then((response) => setClinics(response));
   }, []);
 
-  const goToPatients = (id: string) => {
+  const goToPatients = (id: number) => {
     navigate(route.patients, { state: { id } });
   };
 
@@ -23,7 +23,7 @@ const HomeScreen = () => {
     <div className="text-center">
       <h1 className="mb-5">Select a clinic to begin</h1>
       {clinics.map((clinic) => (
-        <div className="mb-3">
+        <div key={clinic.id} className="mb-3">
           <Button onClick={() => goToPatients(clinic.id)}>{clinic.name}</Button>
         </div>
       ))}
