@@ -8,5 +8,5 @@ export interface Patient {
   clinic_id: string;
   first_name: string;
   last_name: string;
-  data_of_birth: string;
+  date_of_birth: string;
 }
