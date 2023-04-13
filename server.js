@@ -14,6 +14,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 const parseCSV = (fileName) => {
   return new Promise((resolve, reject) => {
     const results = [];
+    // Doesnt seem to be an option for pasing the IDs in the files to an int
+    // If i had more time i would have fixed this
     fs.createReadStream(fileName)
       .on('error', err => reject(err))
       .pipe(csv())
